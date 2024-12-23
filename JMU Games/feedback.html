@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="icon" href="pics/JMU_logo_no_bkgd.png">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/feedback_style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo-container">
+            <a href="https://www.jmu.edu/index.shtml" target="_blank" rel="noopener noreferrer">
+                  <img id="jmu_logo" src="pics/James_Madison_University_Athletics_logo.svg.png" alt="Logo" class="logo">
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-cogs"></i> Home</a></li>
+            <li><a href="crossword.html"><i class="fas fa-home"></i> Crosswords!</a></li>
+            <li><a href="wordle.html"><i class="fas fa-info-circle"></i> Wordle!</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="report.html"><i class="fas fa-envelope"></i> Report</a></li>
+        </ul>
+    </nav>
+
+    <!-- Toggle Button -->
+    <button type="button" class="toggle-btn" id="toggle-btn">☰</button>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <h1><strong>Leave us some feedback!</strong></h1>
+
+        <form id="feedback-form">
+            <label for="name">Name</label>
+            <input id="name" type="text" class="feedback-input" placeholder="Name" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="text" class="feedback-input" placeholder="Email" required>
+
+            <label for="text">Comments</label>
+            <textarea id="text" class="feedback-input" placeholder="Comment" maxlength="500"></textarea>
+
+            <button type="submit" id="save">SUBMIT</button>
+
+            <button type="button" id="clear-data">CLEAR FORM</button>
+
+        </form>
+    </div>
+    <!-- JavaScript for receiving input-->
+    <script
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script>
+        (function() {
+            // Initialize EmailJS
+            emailjs.init("IFGlhW3SinI6OtFxJ"); // public key
+        })();
+        
+        document.getElementById('feedback-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+        
+            const formData = new FormData(e.target);
+            const feedbackData = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                comments: formData.get('text')
+            };
+        
+            emailjs.send('service_y0wg9qs', 'template_iwkbea3', feedbackData)
+                .then(() => {
+                    alert('Feedback sent successfully!');
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('Failed to send feedback.');
+                });
+        });
+    </script>
+
+    <!-- JavaScript to Toggle Sidebar -->
+    <script src="script/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions</title>
+    <link rel="icon" href="pics/JMU_logo_no_bkgd.png">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/solutions_style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo-container">
+            <a href="https://www.jmu.edu/index.shtml" target="_blank" rel="noopener noreferrer">
+                  <img id="jmu_logo" src="pics/James_Madison_University_Athletics_logo.svg.png" alt="Logo" class="logo">
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-cogs"></i> Home</a></li>
+            <li><a href="crossword.html"><i class="fas fa-home"></i> Crosswords!</a></li>
+            <li><a href="wordle.html"><i class="fas fa-info-circle"></i> Wordle!</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="report.html"><i class="fas fa-envelope"></i> Report</a></li>
+        </ul>
+    </nav>
+
+    <!-- Toggle Button -->
+    <button type="button" class="toggle-btn" id="toggle-btn">☰</button>
+
+    <header class="header">
+        <h1>Solutions Page</h1>
+     </header>
+
+    <!-- Main Content Section -->
+    <div class="content">
+
+        <!-- Crossword Solution -->
+        <div class="crossword-box" id="crossword-container">
+            <h2 class="solutions">Crossword Solution</h2>
+
+            <div class="cross-buttons">
+            <button type="button" id="export-solution" onclick="downloadSolution()">Git Solution</button>
+
+
+
+            <!-- Return to Crossword -->
+            <button type="button" id="return-crossword">Return to Crossword</button>
+            </div>
+        </div>
+
+        <!-- Wordle Solution -->
+        <div class="wordle-box" id="wordle-container">
+            <h2 class="solutions">Wordle Solution</h2>
+
+            <div class="wordle-buttons">
+
+            <!-- Return to Wordle -->
+            <button type="button" id="return-wordle">Return to Wordle</button>
+            </div>
+        </div>
+
+
+    </div>
+
+        <!-- JavaScript to Download Solution -->
+    <script>
+        function downloadSolution() {
+            const userConfirmed = confirm(
+        "You will be redirected to a GitHub repository to download the solution."
+    );
+
+    if (userConfirmed) {
+        window.open(
+            "https://github.com/343F24/343f24-final-project-git_money/blob/main/pics/worksheet_answerkey.pdf",
+            "_blank"
+        );   
+    } 
+        }
+    </script>
+
+    <!-- JavaScript to Toggle Sidebar -->
+    <script src="script/index.js"></script>
+
+    <!-- JavaScript for Return Buttons -->
+    <script src="script/solution.js"></script>
+</body>
+</html>

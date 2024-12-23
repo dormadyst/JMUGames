@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JMU Crossword</title>
+    <link rel="icon" href="pics/JMU_logo_no_bkgd.png">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/crossword_style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo-container">
+            <a href="https://www.jmu.edu/index.shtml" target="_blank" rel="noopener noreferrer">
+                  <img id="jmu_logo" src="pics/James_Madison_University_Athletics_logo.svg.png" alt="Logo" class="logo">
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-cogs"></i> Home</a></li>
+            <li><a href="crossword.html"><i class="fas fa-home"></i> Crosswords!</a></li>
+            <li><a href="wordle.html"><i class="fas fa-info-circle"></i> Wordle!</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="report.html"><i class="fas fa-envelope"></i> Report</a></li>
+        </ul>
+    </nav>
+
+    <!-- Toggle Button -->
+    <button type="button" class="toggle-btn" id="toggle-btn">☰</button>
+
+    <!-- Header Section -->
+     <header class="header">
+        <h1>JMU Crosswords!</h1>
+     </header>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <!--<div class="down" id="down"><strong class="down-head">DOWN</strong></div>-->
+
+        <div class="crossword-box" id="crossword-container">
+            <script src="https://crosswords.brightsprout.com/embedjs?puzzle_id=1462709"></script>
+        </div>
+
+        <!--<div class="across" id="across"><strong class="across-head">ACROSS</strong></div>-->
+
+    </div>
+    <div class="see-solution">
+        <!-- See Solutions button -->
+        <button type="button" id="save-game">See Solution</button>
+    </div>
+
+
+    <div class="viewModal">
+        <button type="button" id="viewProgressBtn">View Saved Progress</button>
+    </div>
+
+    <!-- Modal Structure for displaying progress -->
+    <div id="viewProgressModal" class="modal">
+        <div class="modal-content">
+            <h2>Saved Progress</h2>
+            <div id="progressContainer"></div>
+            <button type="button" id="close-progress">Close</button>
+        </div>
+    </div>
+
+    <div class="openModal">
+        <button type="button" class="modal-buttons" id="openModal">Add Progress</button>
+    </div>
+
+    <div id="progressModal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Your Progress</h2>
+            <textarea id="game-notes" placeholder="Enter your progress here..." rows="4" cols="50"></textarea>
+            <div class="modal-buttons">
+                <button type="button" class="modal-buttons" id="save-progress">Save Progress</button>
+                <button type="button" class="modal-buttons" id="close-modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        If you don't know to do crosswords, find out&nbsp;<a target="_blank" href="https://tinyurl.com/3dyrjuxe">here</a>
+    </footer>
+
+    <!-- JavaScript to Check Solution -->
+    <script src="script/crossword.js"></script>
+</body>
+</html>

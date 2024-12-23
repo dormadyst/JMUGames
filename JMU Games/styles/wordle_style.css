@@ -1,0 +1,130 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+body h1 {
+  color: #5f147f;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h3 {
+  color:#CBB677;
+}
+
+#game-board {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.letter-box {
+  border: 2px solid gray;
+  border-radius: 3px;
+  margin: 2px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.filled-box {
+  border: 2px solid black;
+}
+
+.letter-row {
+  display: flex;
+}
+
+#keyboard-cont {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#keyboard-cont div {
+  display: flex;
+}
+
+.second-row {
+  margin: 0.5rem 0;
+}
+
+footer {
+  background-color: #616061;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  margin-left: 0;
+}
+
+footer a {
+  color: #CBB677;
+}
+
+.keyboard-button {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  margin: 0 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  #keyboard-cont {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0.5rem;
+  }
+
+  #keyboard-cont div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .keyboard-button {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+    margin: 0.2rem;
+  }
+
+  .letter-box {
+    font-size: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #keyboard-cont {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .keyboard-button {
+    font-size: 0.7rem;
+    padding: 0.3rem;
+    margin: 0.1rem;
+  }
+
+  .letter-box {
+    font-size: 1.8rem;
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+}

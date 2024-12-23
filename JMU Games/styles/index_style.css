@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes up full viewport height */
+  background-color: white; /* White background for the image background to not be seen */
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  flex-direction: column;
+  align-content: center;
+  color: #4f0270;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+  flex-direction: column;
+  align-content: center;
+  color: #4f0270;
+}
+
+.content p {
+  color: #4f0270;  /* Dark purple text color */
+  font-size: 16px;  /* Adjust font size */
+  line-height: 1.5; /* Line height for readability */
+  margin-top: 20px;
+}
+
+#duke_dog {
+  size: 100px;
+}
+
+#jmu {
+  width: 100vw;
+  height: auto;
+}
+
+footer {
+  background-color: #616061;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  margin-left: 0;
+}
+
+footer a {
+  color: #CBB677;
+}
+
+#weather {
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#weather h2 {
+  margin-bottom: 10px;
+  color: #5f147f;
+}
+
+#weather p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+
+  #duke_dog {
+    width: 60%;
+    max-width: 100px;
+  }
+
+  #jmu {
+    width: 100vw;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+
+  #duke_dog {
+    width: 60%;
+    max-width: 100px;
+  }
+
+  #jmu {
+    width: 100vw;
+    height: auto;
+  }
+}
+

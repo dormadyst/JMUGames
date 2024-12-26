@@ -1,26 +1,26 @@
 html, body {
-    height: 100%;
-    margin: 0;
-  }
+  height: 100%;
+  margin: 0;
+}
   
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;  /* Start from the top */
-    font-family: Arial, sans-serif;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* Start from the top */
+  font-family: Arial, sans-serif;
+}
   
-  body h1 {
-    color: #4f0270;
-    font-family: 'Times New Roman', Times, serif;
-  }
+body h1 {
+  color: #4f0270;
+  font-family: 'Times New Roman', Times, serif;
+}
 
-  .header {
-    margin-left: 199px; /* Leave space for the sidebar */
-    align-items: center; /* Center horizontally */
-    text-align: center; /* Align text to the center */
-    transition: margin-left 0.3s ease;
-  }
+.header {
+  margin-left: 199px; /* Leave space for the sidebar */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Align text to the center */
+  transition: margin-left 0.3s ease;
+}
  
 .crossword-box, .wordle-box {
   width: 35%; /* Each box takes up 45% of the parent width */
@@ -35,84 +35,110 @@ html, body {
   text-align: center;
 }
 
-  #export-solution {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    width: 35%;
-    background:#4f0270;
-    border-radius:5px;
-    border:0;
-    cursor:pointer;
-    color:white;
-    font-size:16px;
-    padding-top:5px;
-    padding-bottom:5px;
-    margin-top: 2%;
-    margin-right: 10%;
-    transition: all 0.3s;
-    font-weight:550;
+#export-solution {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 35%;
+  background:#4f0270;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:16px;
+  padding-top:5px;
+  padding-bottom:5px;
+  margin-top: 2%;
+  margin-right: 10%;
+  transition: all 0.3s;
+  font-weight:550;
+}
+
+#export-solution:hover { background:#a29b37; }
+
+#return-crossword {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 35%;
+  background:#4f0270;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  margin-top: 2%;
+  transition: all 0.3s;
+  font-weight:550;
+}
+#return-crossword:hover { background:#a29b37; }
+
+#return-wordle {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#4f0270;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:16px;
+  padding-top:5px;
+  padding-bottom:5px;
+  margin-top: 2%;
+  margin-right: 10%;
+  transition: all 0.3s;
+  font-weight:550;
+}
+#return-wordle:hover { background:#a29b37; }
+
+
+#word_list {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 35%;
+  background:#4f0270;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:16px;
+  padding-top:5px;
+  padding-bottom:5px;
+  margin-top: 2%;
+  margin-right: 10%;
+  transition: all 0.3s;
+  font-weight:550;
+}
+#word-list:hover { background:#a29b37; }
+
+/* .solutions {
+  color: #4f0270;
+  font-family: 'Times New Roman', Times, serif;
+} */
+
+@media (max-width: 500px) {
+  #return-wordle {
+    width: 100%;
+    font-size:14px;
   }
-  #export-solution:hover { background:#a29b37; }
+
+  .cross-buttons {
+    display: grid;
+    flex-direction: column;
+  }
+
+  .wordle-buttons {
+    display: grid;
+    flex-direction: column;
+  }
+
+  #export-solution {
+    width: 100%;
+    font-size:14px;
+  }
 
   #return-crossword {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    width: 35%;
-    background:#4f0270;
-    border-radius:5px;
-    border:0;
-    cursor:pointer;
-    color:white;
-    font-size:16px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top:5px;
-    padding-bottom:5px;
-    margin-top: 2%;
-    transition: all 0.3s;
-    font-weight:550;
-  }
-  #return-crossword:hover { background:#a29b37; }
-
-  #return-wordle {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     width: 100%;
-    background:#4f0270;
-    border-radius:5px;
-    border:0;
-    cursor:pointer;
-    color:white;
-    font-size:16px;
-    padding-top:5px;
-    padding-bottom:5px;
-    margin-top: 2%;
-    transition: all 0.3s;
-    font-weight:550;
-  }
-  #return-wordle:hover { background:#a29b37; }
-
-  .solutions {
-    color: #4f0270;
-    font-family: 'Times New Roman', Times, serif;
+    font-size:14px;
   }
 
-  @media (max-width: 500px) {
-    #return-wordle {
-      width: 100%;
-      font-size:14px;
-    }
-
-    .cross-buttons {
-      display: grid;
-      flex-direction: column;
-    }
-
-    #export-solution {
-      width: 100%;
-      font-size:14px;
-    }
-
-    #return-crossword {
-      width: 100%;
-      font-size:14px;
-    }
-
-  }
+}

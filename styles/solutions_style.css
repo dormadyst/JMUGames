@@ -108,12 +108,12 @@ body h1 {
   transition: all 0.3s;
   font-weight:550;
 }
-#word-list:hover { background:#a29b37; }
+#word_list:hover { background:#a29b37; }
 
-/* .solutions {
+.solutions {
   color: #4f0270;
   font-family: 'Times New Roman', Times, serif;
-} */
+}
 
 @media (max-width: 500px) {
   #return-wordle {

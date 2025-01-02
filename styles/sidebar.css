@@ -1,147 +1,144 @@
 .sidebar {
-    width: 199px;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: #4f0270;
-    padding: 0px;
-    transition: transform 0.3s ease, width 0.3s ease;
-    transform: translateX(0);
-    font-family: Arial, sans-serif;
-  
+  width: 199px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #4f0270;
+  padding: 0px;
+  transition: transform 0.3s ease, width 0.3s ease;
+  transform: translateX(0);
+  font-family: Arial, sans-serif;
 }
   
 .logo-container {
   display: flex;
   margin-bottom: 20%; /* Space below the logo */
   margin-top: 30%; /* Space below the logo */
-  
 }
   
   
 .logo {
-    width: 150px; /* Adjust the width as needed */
-    padding-left: 10%;
-    height: auto; /* Maintain aspect ratio */
+  width: 150px; /* Adjust the width as needed */
+  padding-left: 10%;
+  height: auto; /* Maintain aspect ratio */
 }
   
-  /* Hide the sidebar by moving it completely off the screen */
+/* Hide the sidebar by moving it completely off the screen */
 .sidebar.collapsed {
-    transform: translateX(-250px);
+  transform: translateX(-250px);
 }
   
 .sidebar ul {
-    list-style-type: none;
-    padding: 15px;
-    margin-top: -25%;
-  
+  list-style-type: none;
+  padding: 15px;
+  margin-top: -25%;
 }
   
 .sidebar ul li {
-    margin: 20px 0;
+  margin: 20px 0;
 }
   
 .sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
 }
   
 .sidebar ul li a:hover {
-    background-color: #575757;
-    padding-left: 10px;
+  background-color: #575757;
+  padding-left: 10px;
 }
   
   
 .sidebar.collapsed ~ .content {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .sidebar.collapsed ~ .header {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .sidebar.collapsed ~ .see-solution {
-    margin-left: 0;
+  margin-left: 0;
 }
   
 /* Toggle Button */
 .toggle-btn {
-    position: fixed; 
-    top: 0px;
-    left: 0px;
-    font-size: 20px;
-    background-color: #a29b37;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1000; 
-    transition: left 0.3s ease;
+  position: fixed; 
+  top: 0px;
+  left: 0px;
+  font-size: 20px;
+  background-color: #a29b37;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000; 
+  transition: left 0.3s ease;
 }
   
 .sidebar:not(.collapsed) ~ .toggle-btn {
-    left: 162px;
+  left: 162px;
 }
   
 .content {
-    flex: 1; /* Make content grow to fill the available space */
-    margin-left: 199px; /* Leave space for the sidebar */
-    display: flex; /* Enable Flexbox to center content */
-    flex-direction: column;
-    justify-content: flex-start; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    text-align: center; /* Align text to the center */
-    padding: 20px;
-    transition: margin-left 0.3s ease;
+  flex: 1; /* Make content grow to fill the available space */
+  margin-left: 199px; /* Leave space for the sidebar */
+  display: flex; /* Enable Flexbox to center content */
+  flex-direction: column;
+  justify-content: flex-start; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Align text to the center */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
 }
 
 @media (max-width: 768px) {
   
-    .content {
-      padding: 10px;
-    }
+  .content {
+    padding: 10px;
+  }
   
-    .sidebar {
-      width: 150px;
-    }
+  .sidebar {
+    width: 150px;
+  }
   
-    .sidebar ul li a {
-      font-size: 16px;
-    }
+  .sidebar ul li a {
+    font-size: 16px;
+  }
   
-    .sidebar:not(.collapsed) ~ .toggle-btn {
-      left: 112.5px;
-    }
+  .sidebar:not(.collapsed) ~ .toggle-btn {
+    left: 112.5px;
+  }
   
-    #jmu_logo {
-      width: 70%;
-      max-width: 120px;
-    }
+  #jmu_logo {
+    width: 70%;
+    max-width: 120px;
+  }
 }
   
 @media (max-width: 480px) {
   
-    .sidebar {
-      width: 120px;
-    }
+  .sidebar {
+    width: 120px;
+  }
   
-    .sidebar ul li a {
-      font-size: 14px;
-    }
+  .sidebar ul li a {
+    font-size: 14px;
+  }
   
-    .content {
-      margin-left: 100px;
-    }
+  .content {
+    margin-left: 100px;
+  }
   
-    .sidebar:not(.collapsed) ~ .toggle-btn {
-      left: 82px;
-    }
+  .sidebar:not(.collapsed) ~ .toggle-btn {
+    left: 82px;
+  }
   
-    #jmu_logo {
-      width: 60%;
-      max-width: 100px;
-    }
+  #jmu_logo {
+    width: 60%;
+    max-width: 100px;
+  }
 }
